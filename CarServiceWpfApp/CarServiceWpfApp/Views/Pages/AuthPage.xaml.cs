@@ -26,14 +26,31 @@ namespace CarServiceWpfApp.Views.Pages
         public AuthPage()
         {
             InitializeComponent();
-            List<Personal> users = db.context.Personal.ToList();
+           
         }
 
 
 
         private void EntryButton_Click(object sender, RoutedEventArgs e)
         {
+            var personal = db.context.Personal.FirstOrDefault(x => x.Personal_Login == LoginTextBox.Text);
+           
+            if (personal != null)
+            {
+                if(personal.Personal_Login==LoginTextBox.Text&& personal.Personal_Password == PasswordPasswordBox.Password)
+                {
+                    this.NavigationService.Navigate(new MainPage());
+                }
+                else
+                {
+                    MessageBox.Show("ты какашка!");
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("ты какашка!2");
+            }
         }
     }
 }

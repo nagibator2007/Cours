@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2rey7g2YWpcFaJ7Hz1j2yueISek7RcBmyAh+11ktwZr027oK/3YzJbYhqC8bK61SDs28TU/PpfCKi9tCxHBH6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lolga\\Source\\Repos\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\CarServiceWpfApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lolga\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
+    "C:\\Users\\lolga\\.nuget\\packages\\entityframework.ru\\6.2.0\\entityframework.ru.6.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
