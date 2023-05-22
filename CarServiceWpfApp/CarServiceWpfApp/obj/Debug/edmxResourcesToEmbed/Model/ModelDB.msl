@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ServiceDBModelContainer" CdmEntityContainer="ServiceDB">
+    <EntitySetMapping Name="Car">
+      <EntityTypeMapping TypeName="ServiceDBModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="Car_Id" ColumnName="Car_Id" />
+          <ScalarProperty Name="Car_MarkName" ColumnName="Car_MarkName" />
+          <ScalarProperty Name="Car_Description" ColumnName="Car_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarInfo">
+      <EntityTypeMapping TypeName="ServiceDBModel.CarInfo">
+        <MappingFragment StoreEntitySet="CarInfo">
+          <ScalarProperty Name="CarInfo1" ColumnName="CarInfo" />
+          <ScalarProperty Name="Car_Id_FK" ColumnName="Car_Id_FK" />
+          <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="ServiceDBModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Clients_Id" ColumnName="Clients_Id" />
+          <ScalarProperty Name="Clients_Name" ColumnName="Clients_Name" />
+          <ScalarProperty Name="Clients_Surname" ColumnName="Clients_Surname" />
+          <ScalarProperty Name="Cleints_Lastname" ColumnName="Cleints_Lastname" />
+          <ScalarProperty Name="Clients_Phone" ColumnName="Clients_Phone" />
+          <ScalarProperty Name="Personal_Id_FK" ColumnName="Personal_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal">
+      <EntityTypeMapping TypeName="ServiceDBModel.Personal">
+        <MappingFragment StoreEntitySet="Personal">
+          <ScalarProperty Name="Personal_Id" ColumnName="Personal_Id" />
+          <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
+          <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />
+          <ScalarProperty Name="Proffesion_Id_FK" ColumnName="Proffesion_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profession">
+      <EntityTypeMapping TypeName="ServiceDBModel.Profession">
+        <MappingFragment StoreEntitySet="Profession">
+          <ScalarProperty Name="Profession_Id" ColumnName="Profession_Id" />
+          <ScalarProperty Name="Profession_Name" ColumnName="Profession_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regestration">
+      <EntityTypeMapping TypeName="ServiceDBModel.Regestration">
+        <MappingFragment StoreEntitySet="Regestration">
+          <ScalarProperty Name="Regestration_Id" ColumnName="Regestration_Id" />
+          <ScalarProperty Name="Regestration_Name" ColumnName="Regestration_Name" />
+          <ScalarProperty Name="Regesrtation_Date" ColumnName="Regesrtation_Date" />
+          <ScalarProperty Name="Regestration_Description" ColumnName="Regestration_Description" />
+          <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="ServiceDBModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Service_Id" ColumnName="Service_Id" />
+          <ScalarProperty Name="Services_Name" ColumnName="Services_Name" />
+          <ScalarProperty Name="Services_Count" ColumnName="Services_Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicesInfo">
+      <EntityTypeMapping TypeName="ServiceDBModel.ServicesInfo">
+        <MappingFragment StoreEntitySet="ServicesInfo">
+          <ScalarProperty Name="ServicesInfo_Id" ColumnName="ServicesInfo_Id" />
+          <ScalarProperty Name="Services_Id_FK" ColumnName="Services_Id_FK" />
+          <ScalarProperty Name="ServicesInfo_Date" ColumnName="ServicesInfo_Date" />
+          <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spare">
+      <EntityTypeMapping TypeName="ServiceDBModel.Spare">
+        <MappingFragment StoreEntitySet="Spare">
+          <ScalarProperty Name="Spare_Id" ColumnName="Spare_Id" />
+          <ScalarProperty Name="Spare_Name" ColumnName="Spare_Name" />
+          <ScalarProperty Name="Spare_Description" ColumnName="Spare_Description" />
+          <ScalarProperty Name="Store_Id_FK" ColumnName="Store_Id_FK" />
+          <ScalarProperty Name="Stock_Id_FK" ColumnName="Stock_Id_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock">
+      <EntityTypeMapping TypeName="ServiceDBModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="Stock_Id" ColumnName="Stock_Id" />
+          <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
+          <ScalarProperty Name="Stock_ProductName" ColumnName="Stock_ProductName" />
+          <ScalarProperty Name="Stock_Count" ColumnName="Stock_Count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Store">
+      <EntityTypeMapping TypeName="ServiceDBModel.Store">
+        <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="Srore_Id" ColumnName="Srore_Id" />
+          <ScalarProperty Name="Store_ProductName" ColumnName="Store_ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ServiceDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

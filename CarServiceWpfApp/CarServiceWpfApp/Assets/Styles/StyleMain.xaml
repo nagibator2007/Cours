@@ -1,0 +1,124 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="ArvoRegular">pack:application:,,,/Assets/Fonts/Arvo.ttf#Arvo Regular</FontFamily>
+    <SolidColorBrush x:Key="TextBoxColor" Color="#9C9C9C"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="#FF9900"/>
+
+    <Style x:Key="LabelTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Width" Value="100"/>
+    </Style>
+
+    <Style x:Key="LabelWithoutWidthTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="PageMainTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,20,0,50"/>
+    </Style>
+
+    <Style x:Key="MainTextBox" TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource TextBoxColor}"/>
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
+
+    <Style x:Key="MainButton" TargetType="Button">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="Padding" Value="10, 0"/>
+        <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="190"/>
+        <Setter Property="Height" Value="30"/>
+    </Style>
+
+    <Style x:Key="UpperRowDefinition" TargetType="RowDefinition">
+        <Setter Property="Height" Value="0.20*"/>
+    </Style>
+
+    <Style x:Key="AuthStackPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+
+    <Style x:Key="AuthChildrenStackPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,20"/>
+    </Style>
+
+    <Style x:Key="MainWindowNavStackpanel" TargetType="StackPanel">
+
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="20,10,20,0"/>
+    </Style>
+
+    <Style TargetType="Frame" x:Key="MainFrame">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="NavigationUIVisibility" Value="Hidden"/>
+    </Style>
+
+    <Style x:Key="MainPasswordBox" TargetType="PasswordBox">
+        <Setter Property="Background" Value="{StaticResource TextBoxColor}"/>
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
+
+    <Style x:Key="MainPageStackPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,20"/>
+    </Style>
+
+    <Style x:Key="MainComboBox" TargetType="ComboBox">
+        <Setter Property="Background" Value="{StaticResource TextBoxColor}"/>
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="MinWidth" Value="200"/>
+    </Style>
+
+    <Style x:Key="SubLabelTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+    </Style>
+
+    <Style x:Key="PageMainLessTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,20,0,20"/>
+    </Style>
+
+    <Style x:Key="MainDataGrid" TargetType="DataGrid">
+        <Setter Property="Height" Value="260"/>
+    </Style>
+
+    <Style x:Key="GridStackPanel" TargetType="StackPanel">
+        <Setter Property="Margin" Value="20,0,20,20"/>
+    </Style>
+
+    <Style x:Key="OrderAboutTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="OrderAboutLabelTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource ArvoRegular}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="110"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="CarServiceWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarServiceWpfApp"
+        mc:Ignorable="d"
+        Title="CarService"  Height="550" Width="800" MinHeight="550" MinWidth="700" MaxHeight="1000" MaxWidth="1800">
+
+    <Window.Background>
+        <SolidColorBrush Color="#847DFE"/>
+    </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource UpperRowDefinition}"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Style="{StaticResource MainWindowNavStackpanel}">
+            <TextBlock Style="{StaticResource LabelWithoutWidthTextBlock}" x:Name="NameAndRoleTextBlock"/>
+            <StackPanel HorizontalAlignment="Right" >
+                <Button Content="Назад" Style="{StaticResource MainButton}" x:Name="BackButton" Click="BackButton_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+        <Frame x:Name="MainFrame" Style="{StaticResource MainFrame}" Navigated="MainFrameNavigated" >
+
+        </Frame>
+    </Grid>
+</Window>
