@@ -121,4 +121,26 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="110"/>
     </Style>
+
+
+    <!--Main Colors-->
+    <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#847DFE"/>
+    <SolidColorBrush x:Key="SecundaryBackgroundColor" Color="#F8F8F8"/>
+
+    <!-- Primary Colors -->
+    <SolidColorBrush x:Key="PrimaryBlueColor" Color="#0E00FF"/>
+    <SolidColorBrush x:Key="PrimaryGrayColor" Color="#BFBFC4"/>
+
+    <!-- Secundary Colors -->
+    <SolidColorBrush x:Key="SecundaryBlueColor" Color="#CEE8FB"/>
+    <SolidColorBrush x:Key="SecundaryGrayColor" Color="#EEEEEE"/>
+
+    <!-- Typograhy Colors -->
+    <SolidColorBrush x:Key="TextPrimaryColor" Color="#FFF"/>
+    <SolidColorBrush x:Key="TextSecundaryColor" Color="AliceBlue"/>
+
+    <!-- Icons Colors -->
+    <SolidColorBrush x:Key="ActionIconColor" Color="#FFF"/>
+
+
 </ResourceDictionary>

@@ -27,19 +27,19 @@ namespace CarServiceWpfApp
             MainFrame.Navigate(new AuthPage());
         }
 
-        private void MainFrameNavigated(object sender, NavigationEventArgs e)
-        {
-            var currentPage = e.Content;
+        //private void MainFrameNavigated(object sender, NavigationEventArgs e)
+        //{
+        //    var currentPage = e.Content;
 
-            if (MainFrame.CanGoBack && !(currentPage is MainPage))
-            {
-                BackButton.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                BackButton.Visibility = Visibility.Hidden;
-            }
-        }
+        //    if (MainFrame.CanGoBack && !(currentPage is MainPage))
+        //    {
+        //        BackButton.Visibility = Visibility.Visible;
+        //    }
+        //    else
+        //    {
+        //        BackButton.Visibility = Visibility.Hidden;
+        //    }
+        //}
 
 
         /// <summary>
@@ -52,5 +52,9 @@ namespace CarServiceWpfApp
             MainFrame.GoBack();
         }
 
+        private void MainFrameNavigated(object sender, NavigationEventArgs e)
+        {
+
+        }
     }
 }

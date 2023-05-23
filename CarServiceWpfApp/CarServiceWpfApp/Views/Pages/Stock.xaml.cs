@@ -16,33 +16,13 @@ using System.Windows.Shapes;
 namespace CarServiceWpfApp.Views.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для Stock.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class Stock : Page
     {
-        public MainPage()
+        public Stock()
         {
             InitializeComponent();
-        }
-
-        private void OrdersButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ReportsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void WarehouseButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

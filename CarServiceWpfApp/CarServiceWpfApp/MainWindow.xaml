@@ -10,19 +10,8 @@
     <Window.Background>
         <SolidColorBrush Color="#847DFE"/>
     </Window.Background>
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Style="{StaticResource UpperRowDefinition}"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <StackPanel Style="{StaticResource MainWindowNavStackpanel}">
-            <TextBlock Style="{StaticResource LabelWithoutWidthTextBlock}" x:Name="NameAndRoleTextBlock"/>
-            <StackPanel HorizontalAlignment="Right" >
-                <Button Content="Назад" Style="{StaticResource MainButton}" x:Name="BackButton" Click="BackButton_Click"/>
-            </StackPanel>
 
-        </StackPanel>
+    <Grid>
         <Frame x:Name="MainFrame" Style="{StaticResource MainFrame}" Navigated="MainFrameNavigated" >
 
         </Frame>

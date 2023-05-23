@@ -9,6 +9,37 @@
       Title="MainPage">
 
     <Grid>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Ширина колонки для сайдбара -->
+            <ColumnDefinition/>
+            <!-- Оставшаяся ширина для контента -->
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="LightGray">
+            <StackPanel Margin="0,20,0,0">
+                <!-- Здесь размещаете логотип -->
+                <TextBlock Text="Автосервиском" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,50,0,0">
+                <!-- Здесь размещаете навигационные элементы -->
+                <Button Content="Заказы-наряды" Click="OrdersButton_Click"/>
+                <Button Content="Склад" Click="WarehouseButton_Click"/>
+                <Button Content="Отчёты" Click="ReportsButton_Click"/>
+                
+            </StackPanel>
+        </StackPanel>
         
+        <!--Кнопка настроек-->
+        <Button Content="Настройки" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="SettingsButton_Click"/>
+
+        <Grid Grid.Column="1">
+            <!-- Здесь размещаете контент страницы -->
+            <TextBlock Text="Содержимое страницы" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
     </Grid>
 </Page>

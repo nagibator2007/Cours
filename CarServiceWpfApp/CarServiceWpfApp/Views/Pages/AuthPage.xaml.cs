@@ -33,7 +33,7 @@ namespace CarServiceWpfApp.Views.Pages
 
         private void EntryButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new MainPage());
         }
     }
 }
