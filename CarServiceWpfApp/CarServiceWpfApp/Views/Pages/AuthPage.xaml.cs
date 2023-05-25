@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -26,14 +27,19 @@ namespace CarServiceWpfApp.Views.Pages
         public AuthPage()
         {
             InitializeComponent();
-            List<Personal> users = db.context.Personal.ToList();
+          
         }
 
 
 
         private void EntryButton_Click(object sender, RoutedEventArgs e)
         {
-           this.NavigationService.Navigate(new MainPage());
+           if(db.context.Personal.Where(x=>x.Personal_Login==LoginTextBox.Text&& x.Personal_Password==PasswordPasswordBox.Password).FirstOrDefault()!=null) {
+
+                Personal personal =db.context.Personal.First(x=>x.Personal_Login==LoginTextBox.Text);
+
+                this.NavigationService.Navigate(new MainPage(personal));
+            }
         }
     }
 }

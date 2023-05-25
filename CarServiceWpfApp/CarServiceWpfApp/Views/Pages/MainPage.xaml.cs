@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceWpfApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,13 @@ namespace CarServiceWpfApp.Views.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-        public MainPage()
+        Core db=new Core();
+        Personal personalGet;
+        public MainPage(Personal personal)
         {
+          
+            personalGet=personal;
+            
             InitializeComponent();
         }
 
