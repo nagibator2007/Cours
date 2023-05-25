@@ -27,7 +27,7 @@ namespace CarServiceWpfApp.Views.Pages
 
         private void OrdersButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new WorkOrders());
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)

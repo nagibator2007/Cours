@@ -24,5 +24,6 @@ namespace CarServiceWpfApp.Views.Pages
         {
             InitializeComponent();
         }
+
     }
 }

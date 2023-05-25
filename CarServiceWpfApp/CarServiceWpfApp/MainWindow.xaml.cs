@@ -51,10 +51,5 @@ namespace CarServiceWpfApp
         {
             MainFrame.GoBack();
         }
-
-        private void MainFrameNavigated(object sender, NavigationEventArgs e)
-        {
-
-        }
     }
 }

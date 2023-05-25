@@ -12,7 +12,7 @@
     </Window.Background>
 
     <Grid>
-        <Frame x:Name="MainFrame" Style="{StaticResource MainFrame}" Navigated="MainFrameNavigated" >
+        <Frame x:Name="MainFrame" Style="{StaticResource MainFrame}" >
 
         </Frame>
     </Grid>
