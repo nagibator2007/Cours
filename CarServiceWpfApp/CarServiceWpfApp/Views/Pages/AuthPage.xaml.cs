@@ -40,6 +40,10 @@ namespace CarServiceWpfApp.Views.Pages
 
                 this.NavigationService.Navigate(new MainPage(personal));
             }
+            else
+            {
+                MessageBox.Show("Проверьте правильность введёных значений.");
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
 
         <Grid Grid.Column="1">
             <!-- Здесь размещаете контент страницы -->
-            <TextBlock Text="Содержимое страницы" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Содержимое страницы" Name="GreetingTextBlock"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
     </Grid>

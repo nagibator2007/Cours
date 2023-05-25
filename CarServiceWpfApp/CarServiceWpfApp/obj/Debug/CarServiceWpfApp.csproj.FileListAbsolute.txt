@@ -67,8 +67,6 @@ C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfAp
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\CarServiceWpfApp.pdb
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\EntityFramework.dll
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\EntityFramework.xml
-C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\CarServiceWpfApp.csproj.AssemblyReference.cache
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\CarServiceWpfApp.csproj.SuggestedBindingRedirects.cache
@@ -97,3 +95,4 @@ C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfAp
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\CarServiceWpfApp.csproj.CopyComplete
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\CarServiceWpfApp.exe
 C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\CarServiceWpfApp.pdb
+C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

@@ -24,7 +24,7 @@
                 <TextBlock Text="Пароль" Style="{StaticResource LabelTextBlock}"/>
                 <PasswordBox Style="{StaticResource MainPasswordBox}" x:Name="PasswordPasswordBox"/>
             </StackPanel>
-            <Button Content="Войти" Style="{StaticResource MainButton}" x:Name="EntryButton" Click="EntryButton_Click"/>
+            <Button Content="Войти" Style="{StaticResource MainButton}" x:Name="EntryButton" Click="EntryButton_Click" IsDefault="True"/>
         </StackPanel>
     </Grid>
 </Page>

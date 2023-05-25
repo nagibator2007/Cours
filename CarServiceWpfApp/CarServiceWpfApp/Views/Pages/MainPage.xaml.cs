@@ -29,6 +29,7 @@ namespace CarServiceWpfApp.Views.Pages
             personalGet=personal;
             
             InitializeComponent();
+            GreetingTextBlock.Text = $"Здарова, заебал {personal.Personal_Login}!";
         }
 
         private void OrdersButton_Click(object sender, RoutedEventArgs e)

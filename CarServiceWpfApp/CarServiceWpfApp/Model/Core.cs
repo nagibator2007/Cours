@@ -8,6 +8,6 @@ namespace CarServiceWpfApp.Model
 {
     public class Core
     {
-        public ServiceDB context = new ServiceDB();
+        public ServiceDBEntities context = new ServiceDBEntities();
     }
 }

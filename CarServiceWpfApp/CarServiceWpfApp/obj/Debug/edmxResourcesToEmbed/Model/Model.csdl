@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Car_Id" />
+    </Key>
+    <Property Name="Car_Id" Type="Int32" Nullable="false" />
+    <Property Name="Car_MarkName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Car_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CarInfo" Relationship="Self.FK_CarInfo_Car" FromRole="Car" ToRole="CarInfo" />
+  </EntityType>
+  <EntityType Name="CarInfo">
+    <Key>
+      <PropertyRef Name="CarInfo1" />
+    </Key>
+    <Property Name="CarInfo1" Type="Int32" Nullable="false" />
+    <Property Name="Car_Id_FK" Type="Int32" Nullable="false" />
+    <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="Self.FK_CarInfo_Car" FromRole="CarInfo" ToRole="Car" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_CarInfo_Clients" FromRole="CarInfo" ToRole="Clients" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Clients_Id" />
+    </Key>
+    <Property Name="Clients_Id" Type="Int32" Nullable="false" />
+    <Property Name="Clients_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Clients_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cleints_Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Clients_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Personal_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CarInfo" Relationship="Self.FK_CarInfo_Clients" FromRole="Clients" ToRole="CarInfo" />
+    <NavigationProperty Name="Personal" Relationship="Self.FK_Clients_Personal" FromRole="Clients" ToRole="Personal" />
+    <NavigationProperty Name="Regestration" Relationship="Self.FK_Regestration_Clients" FromRole="Clients" ToRole="Regestration" />
+    <NavigationProperty Name="ServicesInfo" Relationship="Self.FK_ServicesInfo_Clients" FromRole="Clients" ToRole="ServicesInfo" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Stock_Clients" FromRole="Clients" ToRole="Stock" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="Personal_Id" />
+    </Key>
+    <Property Name="Personal_Id" Type="Int32" Nullable="false" />
+    <Property Name="Personal_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Personal_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Proffesion_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
+    <NavigationProperty Name="Profession" Relationship="Self.FK_Personal_Profession" FromRole="Personal" ToRole="Profession" />
+  </EntityType>
+  <EntityType Name="Profession">
+    <Key>
+      <PropertyRef Name="Profession_Id" />
+    </Key>
+    <Property Name="Profession_Id" Type="Int32" Nullable="false" />
+    <Property Name="Profession_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Personal" Relationship="Self.FK_Personal_Profession" FromRole="Profession" ToRole="Personal" />
+  </EntityType>
+  <EntityType Name="Regestration">
+    <Key>
+      <PropertyRef Name="Regestration_Id" />
+    </Key>
+    <Property Name="Regestration_Id" Type="Int32" Nullable="false" />
+    <Property Name="Regestration_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Regesrtation_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Regestration_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Regestration_Clients" FromRole="Regestration" ToRole="Clients" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Service_Id" />
+    </Key>
+    <Property Name="Service_Id" Type="Int32" Nullable="false" />
+    <Property Name="Services_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Services_Count" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ServicesInfo" Relationship="Self.FK_ServicesInfo_Services" FromRole="Services" ToRole="ServicesInfo" />
+  </EntityType>
+  <EntityType Name="ServicesInfo">
+    <Key>
+      <PropertyRef Name="ServicesInfo_Id" />
+    </Key>
+    <Property Name="ServicesInfo_Id" Type="Int32" Nullable="false" />
+    <Property Name="Services_Id_FK" Type="Int32" Nullable="false" />
+    <Property Name="ServicesInfo_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_ServicesInfo_Clients" FromRole="ServicesInfo" ToRole="Clients" />
+    <NavigationProperty Name="Services" Relationship="Self.FK_ServicesInfo_Services" FromRole="ServicesInfo" ToRole="Services" />
+  </EntityType>
+  <EntityType Name="Spare">
+    <Key>
+      <PropertyRef Name="Spare_Id" />
+    </Key>
+    <Property Name="Spare_Id" Type="Int32" Nullable="false" />
+    <Property Name="Spare_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Spare_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Store_Id_FK" Type="Int32" Nullable="false" />
+    <Property Name="Stock_Id_FK" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_Spare_Stock" FromRole="Spare" ToRole="Stock" />
+    <NavigationProperty Name="Store" Relationship="Self.FK_Spare_Store" FromRole="Spare" ToRole="Store" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Stock_Id" />
+    </Key>
+    <Property Name="Stock_Id" Type="Int32" Nullable="false" />
+    <Property Name="Clients_Id_FK" Type="Int32" Nullable="false" />
+    <Property Name="Stock_ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Stock_Count" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK_Stock_Clients" FromRole="Stock" ToRole="Clients" />
+    <NavigationProperty Name="Spare" Relationship="Self.FK_Spare_Stock" FromRole="Stock" ToRole="Spare" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="Srore_Id" />
+    </Key>
+    <Property Name="Srore_Id" Type="Int32" Nullable="false" />
+    <Property Name="Store_ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Spare" Relationship="Self.FK_Spare_Store" FromRole="Store" ToRole="Spare" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_CarInfo_Car">
+    <End Role="Car" Type="Self.Car" Multiplicity="1" />
+    <End Role="CarInfo" Type="Self.CarInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car">
+        <PropertyRef Name="Car_Id" />
+      </Principal>
+      <Dependent Role="CarInfo">
+        <PropertyRef Name="Car_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CarInfo_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="CarInfo" Type="Self.CarInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Clients_Id" />
+      </Principal>
+      <Dependent Role="CarInfo">
+        <PropertyRef Name="Clients_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Personal">
+    <End Role="Personal" Type="Self.Personal" Multiplicity="1" />
+    <End Role="Clients" Type="Self.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="Personal_Id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="Personal_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Regestration_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Regestration" Type="Self.Regestration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Clients_Id" />
+      </Principal>
+      <Dependent Role="Regestration">
+        <PropertyRef Name="Clients_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesInfo_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="ServicesInfo" Type="Self.ServicesInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Clients_Id" />
+      </Principal>
+      <Dependent Role="ServicesInfo">
+        <PropertyRef Name="Clients_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stock_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Clients_Id" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="Clients_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personal_Profession">
+    <End Role="Profession" Type="Self.Profession" Multiplicity="1" />
+    <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profession">
+        <PropertyRef Name="Profession_Id" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="Proffesion_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicesInfo_Services">
+    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="ServicesInfo" Type="Self.ServicesInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Services">
+        <PropertyRef Name="Service_Id" />
+      </Principal>
+      <Dependent Role="ServicesInfo">
+        <PropertyRef Name="Services_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Spare_Stock">
+    <End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+    <End Role="Spare" Type="Self.Spare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="Stock_Id" />
+      </Principal>
+      <Dependent Role="Spare">
+        <PropertyRef Name="Stock_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Spare_Store">
+    <End Role="Store" Type="Self.Store" Multiplicity="1" />
+    <End Role="Spare" Type="Self.Spare" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="Srore_Id" />
+      </Principal>
+      <Dependent Role="Spare">
+        <PropertyRef Name="Store_Id_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ServiceDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Car" EntityType="Self.Car" />
+    <EntitySet Name="CarInfo" EntityType="Self.CarInfo" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Personal" EntityType="Self.Personal" />
+    <EntitySet Name="Profession" EntityType="Self.Profession" />
+    <EntitySet Name="Regestration" EntityType="Self.Regestration" />
+    <EntitySet Name="Services" EntityType="Self.Services" />
+    <EntitySet Name="ServicesInfo" EntityType="Self.ServicesInfo" />
+    <EntitySet Name="Spare" EntityType="Self.Spare" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" />
+    <EntitySet Name="Store" EntityType="Self.Store" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_CarInfo_Car" Association="Self.FK_CarInfo_Car">
+      <End Role="Car" EntitySet="Car" />
+      <End Role="CarInfo" EntitySet="CarInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CarInfo_Clients" Association="Self.FK_CarInfo_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="CarInfo" EntitySet="CarInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Personal" Association="Self.FK_Clients_Personal">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Regestration_Clients" Association="Self.FK_Regestration_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Regestration" EntitySet="Regestration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesInfo_Clients" Association="Self.FK_ServicesInfo_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="ServicesInfo" EntitySet="ServicesInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stock_Clients" Association="Self.FK_Stock_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personal_Profession" Association="Self.FK_Personal_Profession">
+      <End Role="Profession" EntitySet="Profession" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicesInfo_Services" Association="Self.FK_ServicesInfo_Services">
+      <End Role="Services" EntitySet="Services" />
+      <End Role="ServicesInfo" EntitySet="ServicesInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Spare_Stock" Association="Self.FK_Spare_Stock">
+      <End Role="Stock" EntitySet="Stock" />
+      <End Role="Spare" EntitySet="Spare" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Spare_Store" Association="Self.FK_Spare_Store">
+      <End Role="Store" EntitySet="Store" />
+      <End Role="Spare" EntitySet="Spare" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

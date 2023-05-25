@@ -13,10 +13,10 @@ namespace CarServiceWpfApp.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ServiceDB : DbContext
+    public partial class ServiceDBEntities : DbContext
     {
-        public ServiceDB()
-            : base("name=ServiceDB")
+        public ServiceDBEntities()
+            : base("name=ServiceDBEntities")
         {
         }
     
