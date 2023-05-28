@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище ServiceDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище ServiceDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Car">
           <Key>
             <PropertyRef Name="Car_Id" />
@@ -15,9 +15,9 @@
         </EntityType>
         <EntityType Name="CarInfo">
           <Key>
-            <PropertyRef Name="CarInfo1" />
+            <PropertyRef Name="CarInfo" />
           </Key>
-          <Property Name="CarInfo1" Type="int" Nullable="false" />
+          <Property Name="CarInfo" Type="int" Nullable="false" />
           <Property Name="Car_Id_FK" Type="int" Nullable="false" />
           <Property Name="Clients_Id_FK" Type="int" Nullable="false" />
         </EntityType>
@@ -40,6 +40,8 @@
           <Property Name="Personal_Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Personal_Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Proffesion_Id_FK" Type="int" Nullable="false" />
+          <Property Name="Personal_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Personal_Surname" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Profession">
           <Key>
@@ -333,6 +335,8 @@
           <Property Name="Personal_Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Personal_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Proffesion_Id_FK" Type="Int32" Nullable="false" />
+          <Property Name="Personal_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Personal_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Clients_Personal" FromRole="Personal" ToRole="Clients" />
           <NavigationProperty Name="Profession" Relationship="Self.FK_Personal_Profession" FromRole="Personal" ToRole="Profession" />
         </EntityType>
@@ -536,7 +540,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ServiceDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ServiceDBEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Car" EntityType="Self.Car" />
           <EntitySet Name="CarInfo" EntityType="Self.CarInfo" />
           <EntitySet Name="Clients" EntityType="Self.Clients" />
@@ -595,7 +599,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ServiceDBModelContainer" CdmEntityContainer="ServiceDBEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ServiceDBModelContainer" CdmEntityContainer="ServiceDBEntities2">
           <EntitySetMapping Name="Car">
             <EntityTypeMapping TypeName="ServiceDBModel.Car">
               <MappingFragment StoreEntitySet="Car">
@@ -608,7 +612,7 @@
           <EntitySetMapping Name="CarInfo">
             <EntityTypeMapping TypeName="ServiceDBModel.CarInfo">
               <MappingFragment StoreEntitySet="CarInfo">
-                <ScalarProperty Name="CarInfo1" ColumnName="CarInfo1" />
+                <ScalarProperty Name="CarInfo1" ColumnName="CarInfo" />
                 <ScalarProperty Name="Car_Id_FK" ColumnName="Car_Id_FK" />
                 <ScalarProperty Name="Clients_Id_FK" ColumnName="Clients_Id_FK" />
               </MappingFragment>
@@ -633,6 +637,8 @@
                 <ScalarProperty Name="Personal_Login" ColumnName="Personal_Login" />
                 <ScalarProperty Name="Personal_Password" ColumnName="Personal_Password" />
                 <ScalarProperty Name="Proffesion_Id_FK" ColumnName="Proffesion_Id_FK" />
+                <ScalarProperty Name="Personal_Name" ColumnName="Personal_Name" />
+                <ScalarProperty Name="Personal_Surname" ColumnName="Personal_Surname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -730,7 +736,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
       </DesignerInfoPropertySet>
     </Options>

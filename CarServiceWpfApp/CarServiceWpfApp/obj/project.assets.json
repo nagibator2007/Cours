@@ -212,20 +212,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lolga\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lolga\\Source\\Repos\\nagibator2007\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\CarServiceWpfApp.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Cours\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\CarServiceWpfApp.csproj",
       "projectName": "CarServiceWpfApp",
-      "projectPath": "C:\\Users\\lolga\\Source\\Repos\\nagibator2007\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\CarServiceWpfApp.csproj",
-      "packagesPath": "C:\\Users\\lolga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lolga\\Source\\Repos\\nagibator2007\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\Cours\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\CarServiceWpfApp.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Cours\\Cours\\CarServiceWpfApp\\CarServiceWpfApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\lolga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

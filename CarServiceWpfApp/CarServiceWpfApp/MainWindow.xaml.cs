@@ -1,4 +1,5 @@
-﻿using CarServiceWpfApp.Views.Pages;
+﻿using CarServiceWpfApp.Model;
+using CarServiceWpfApp.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,35 +22,71 @@ namespace CarServiceWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        Core db = new Core();
+        int IdPer;
+        string roleNamePer;
+        string NamePer;
+        string surnamePer;
+
+        public MainWindow(int roleId, string role, string name, string surname, string lastname)
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthPage());
+
+            IdPer = db.context.Personal.Where(x => x.Personal_Login == NamePer).Where(x => x.Personal_Surname == surnamePer).Select(x => x.Personal_Id).First();
+            PagesNavigation.Navigate(new MainPage(idPer));
+
         }
 
-        //private void MainFrameNavigated(object sender, NavigationEventArgs e)
-        //{
-        //    var currentPage = e.Content;
-
-        //    if (MainFrame.CanGoBack && !(currentPage is MainPage))
-        //    {
-        //        BackButton.Visibility = Visibility.Visible;
-        //    }
-        //    else
-        //    {
-        //        BackButton.Visibility = Visibility.Hidden;
-        //    }
-        //}
 
 
-        /// <summary>
-        /// Кнопка назад
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void rdHome_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.GoBack();
+            PagesNavigation.Navigate(new MainPage(idPer));
+        }
+
+        private void rdHome_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdWorkOrders_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdStock_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdReports_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdSettings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rdSettings_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRestore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

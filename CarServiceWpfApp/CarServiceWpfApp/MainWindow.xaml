@@ -5,15 +5,86 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarServiceWpfApp"
         mc:Ignorable="d"
-        Title="CarService"  Height="550" Width="800" MinHeight="550" MinWidth="700" MaxHeight="1000" MaxWidth="1800">
+        Title="CarService"  Height="550" Width="800" WindowState="Maximized">
 
     <Window.Background>
-        <SolidColorBrush Color="#847DFE"/>
+        <SolidColorBrush Color="#f8f8f8"/>
     </Window.Background>
 
     <Grid>
-        <Frame x:Name="MainFrame" Style="{StaticResource MainFrame}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Start: GridColum Left-->
+        <Border>
+            <Grid x:Name="gridMenu" Width="185" Background="#847DFE">
 
-        </Frame>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <TextBlock Style="{StaticResource PageMainTextBlock}">Автосервиском</TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <RadioButton x:Name="rdHome" Content="Домашняя страиница" Click="rdHome_Click" Cursor="Hand" Checked="rdHome_Checked">
+                    </RadioButton>
+                    
+                    <RadioButton x:Name="rdWorkOrders" Content="Заказы-наряды" Click="rdWorkOrders_Click" Cursor="Hand"/>
+                    <RadioButton x:Name="rdStock" Content="Склад" Click="rdStock_Click" Cursor="Hand" />
+                    <RadioButton x:Name="rdReports" Content="Отчёты" Cursor="Hand" Checked="rdReports_Checked"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" x:Name="UserSettings" VerticalAlignment="Bottom" Width="185" Margin="0 0 0 20">
+                    <StackPanel Orientation="Vertical">
+                        <RadioButton x:Name="rdSettings" Content="Настройки" Click="rdSettings_Click" Checked="rdSettings_Checked"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </Grid>
+        </Border>
+        <!-- End: GridColum Left-->
+        
+        <!-- Start: GridColumn Rigth -->
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="105*"/>
+                <RowDefinition Height="69*"/>
+                <RowDefinition Height="316*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Start: Button Close | Restore | Minimize -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton" Cursor="Hand"/>
+            <Button x:Name="btnRestore" Margin="5,0" Click="btnRestore_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource IconButtonsStyle}">
+                        <Setter Property="Content" Value="{DynamicResource maximize}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=home, Path=WindowState}" Value="Maximized">
+                                <Setter Property="Content" Value="{DynamicResource restore}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
+        </StackPanel>
+        <!-- End: Button Close | Restore | Minimize -->
+        </Grid>
+
+
+        <Border Grid.Row="1" Margin="0,5,5,5" Grid.RowSpan="3">
+            <Frame x:Name="PagesNavigation" NavigationUIVisibility="Hidden" Cursor="Hand">
+                <!-- Page Content -->
+            </Frame>
+        </Border>
     </Grid>
 </Window>

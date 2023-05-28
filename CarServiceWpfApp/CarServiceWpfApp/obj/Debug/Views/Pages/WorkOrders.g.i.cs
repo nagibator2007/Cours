@@ -40,6 +40,14 @@ namespace CarServiceWpfApp.Views.Pages {
     /// </summary>
     public partial class WorkOrders : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
+        
+        #line 21 "..\..\..\..\Views\Pages\WorkOrders.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox SerchTextBox;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -68,6 +76,18 @@ namespace CarServiceWpfApp.Views.Pages {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
+            switch (connectionId)
+            {
+            case 1:
+            this.SerchTextBox = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 21 "..\..\..\..\Views\Pages\WorkOrders.xaml"
+            this.SerchTextBox.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.SerchTextBox_TextChanged);
+            
+            #line default
+            #line hidden
+            return;
+            }
             this._contentLoaded = true;
         }
     }

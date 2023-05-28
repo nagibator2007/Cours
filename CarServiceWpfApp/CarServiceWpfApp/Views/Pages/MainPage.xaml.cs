@@ -32,24 +32,24 @@ namespace CarServiceWpfApp.Views.Pages
             GreetingTextBlock.Text = $"Здарова, заебал {personal.Personal_Login}!";
         }
 
-        private void OrdersButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new WorkOrders());
-        }
+        //private void OrdersButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.NavigationService.Navigate(new WorkOrdersPage());
+        //}
 
-        private void SettingsButton_Click(object sender, RoutedEventArgs e)
-        {
+        //private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.NavigationService.Navigate(new SettingsPage());
+        //}
 
-        }
+        //private void ReportsButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //this.NavigationService.Navigate(new ());
+        //}
 
-        private void ReportsButton_Click(object sender, RoutedEventArgs e)
-        {
+        //private void WarehouseButton_Click(object sender, RoutedEventArgs e)
+        //{
 
-        }
-
-        private void WarehouseButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        //}
     }
 }

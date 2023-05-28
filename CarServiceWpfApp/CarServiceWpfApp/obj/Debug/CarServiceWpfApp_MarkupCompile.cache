@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\
+C:\Users\user\Desktop\Cours\Cours\CarServiceWpfApp\CarServiceWpfApp\obj\Debug\
 CarServiceWpfApp
 none
 false
 DEBUG;TRACE
-C:\Users\lolga\Source\Repos\nagibator2007\Cours\CarServiceWpfApp\CarServiceWpfApp\App.xaml
-751038538
-2-95638413
-26-254197685
-181316381343
-Assets\Styles\StyleMain.xaml;MainWindow.xaml;Views\Pages\AuthPage.xaml;Views\Pages\MainPage.xaml;Views\Pages\Reports.xaml;Views\Pages\Stock.xaml;Views\Pages\WorkOrders.xaml;
+C:\Users\user\Desktop\Cours\Cours\CarServiceWpfApp\CarServiceWpfApp\App.xaml
+9133504556
+2739969757
+27287501479
+18-77809067
+Assets\Icons\Icons.xaml;Assets\Styles\StyleMain.xaml;MainWindow.xaml;Views\Pages\AuthPage.xaml;Views\Pages\MainPage.xaml;Views\Pages\ReportsPage.xaml;Views\Pages\SettingsPage.xaml;Views\Pages\StockPage.xaml;Views\Pages\WorkOrdersPage.xaml;
 
-False
+True
 
